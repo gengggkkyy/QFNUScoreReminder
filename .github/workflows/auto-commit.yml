@@ -29,19 +29,23 @@ jobs:
 
       - name: Run script for Account 1
         env:
-          USER_ACCOUNT_1: ${{ secrets.USER_ACCOUNT_1 }}
-          USER_PASSWORD_1: ${{ secrets.USER_PASSWORD_1 }}
+          USER_ACCOUNT: ${{ secrets.USER_ACCOUNT_1 }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD_1 }}
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
+          FEISHU_BOT_URL: ${{ secrets.FEISHU_BOT_URL }}
+          FEISHU_BOT_SECRET: ${{ secrets.FEISHU_BOT_SECRET }}
           ACCOUNT_INDEX: 1
         run: python main.py
 
       - name: Run script for Account 2
         env:
-          USER_ACCOUNT_2: ${{ secrets.USER_ACCOUNT_2 }}
-          USER_PASSWORD_2: ${{ secrets.USER_PASSWORD_2 }}
+          USER_ACCOUNT: ${{ secrets.USER_ACCOUNT_2 }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD_2 }}
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
+          FEISHU_BOT_URL: ${{ secrets.FEISHU_BOT_URL }}
+          FEISHU_BOT_SECRET: ${{ secrets.FEISHU_BOT_SECRET }}
           ACCOUNT_INDEX: 2
         run: python main.py
 
